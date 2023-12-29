@@ -9,6 +9,7 @@ import CareerLayout from '../layout/CareerLayout'
 import FaqPage from '../page/help/FaqPage.vue'
 import ContactPage from '../page/help/ContactPage.vue'
 import CareersPage from '../page/career/CareersPage.vue'
+import CareersDetailPage from '../page/career/CareersDetailPage.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -44,6 +45,11 @@ const router = createRouter({
         {
           path:'',
           component: CareersPage
+        },
+        {
+          path: ':id',
+          name: 'careesDetai',
+          component: CareersDetailPage
         }
       ]
     },
