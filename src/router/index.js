@@ -2,9 +2,13 @@ import { createRouter, createWebHistory  } from "vue-router";
 import Home from '../page/HomePage.vue'
 import About from '../page/AboutPage.vue'
 import NotFound from '../page/NotFound.vue'
+
 import HelpLayout from '../layout/HelpLayout.vue'
+import CareerLayout from '../layout/CareerLayout'
+
 import FaqPage from '../page/help/FaqPage.vue'
 import ContactPage from '../page/help/ContactPage.vue'
+import CareersPage from '../page/career/CareersPage.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -30,6 +34,16 @@ const router = createRouter({
           path: 'contact',
           name: 'contact',
           component: ContactPage
+        }
+      ]
+    },
+    {
+      path: '/careers',
+      component: CareerLayout,
+      children: [
+        {
+          path:'',
+          component: CareersPage
         }
       ]
     },
