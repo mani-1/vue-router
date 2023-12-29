@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory  } from "vue-router";
 import Home from '../page/HomePage.vue'
 import About from '../page/AboutPage.vue'
+import NotFound from '../page/NotFound.vue'
 import HelpLayout from '../layout/HelpLayout.vue'
 import FaqPage from '../page/help/FaqPage.vue'
 import ContactPage from '../page/help/ContactPage.vue'
@@ -31,6 +32,10 @@ const router = createRouter({
           component: ContactPage
         }
       ]
+    },
+    {
+      path: '/:catchAll(.*)',
+      component: NotFound
     }
   ]
 })
